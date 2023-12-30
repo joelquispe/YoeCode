@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from 'react';
+
+import './App.css';
+import { motion } from 'framer-motion';
+import HomePage from './ui/pages/home.page';
 
 function App() {
-  const [count, setCount] = useState(0)
+	const [showLogo, setShowLogo] = useState(true);
+	useEffect(() => {
+		const timeOutId = setTimeout(() => {
+			setShowLogo(false);
+		}, 2000);
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+		return () => clearTimeout(timeOutId);
+	}, []);
+	return (
+		<div className="bg-black flex h-screen w-screen justify-center items-center absolute">
+			<motion.div
+				className="absolute"
+				transition={{ delay: 0.6, duration: 0.5 }}
+				initial={{ scale: 0, rotate: 200 }}
+				animate={{ scale: showLogo ? 1 : 0, rotate: 0 }}
+				exit={{ scale: 0 }}
+			>
+				<img src="./img/logo.png" className="w-56" alt="" />
+			</motion.div>
+			<motion.div
+				transition={{ delay: 0.6, duration: 0.5 }}
+				initial={{ opacity: 0 }}
+				animate={{ opacity: !showLogo ? 1 : 0 }}
+			>
+				<div className="h-full  w-screen bg-slate-950">
+					<HomePage />
+				</div>
+			</motion.div>
+		</div>
+	);
 }
 
-export default App
+export default App;
