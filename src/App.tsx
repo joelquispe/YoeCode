@@ -4,6 +4,7 @@ import './App.css';
 import { motion } from 'framer-motion';
 import HomePage from './ui/pages/home.page';
 
+
 function App() {
 	const [showLogo, setShowLogo] = useState(true);
 	useEffect(() => {
@@ -14,7 +15,7 @@ function App() {
 		return () => clearTimeout(timeOutId);
 	}, []);
 	return (
-		<div className="bg-black flex h-screen w-screen justify-center items-center absolute ">
+		<div className="bg-black flex   w-screen justify-center items-center  ">
 			<motion.div
 				className="absolute"
 				transition={{ delay: 0.6, duration: 0.5 }}
@@ -29,9 +30,11 @@ function App() {
 				initial={{ opacity: 0 }}
 				animate={{ opacity: !showLogo ? 1 : 0 }}
 			>
-				
+				<div className="  flex justify-center w-screen bg-slate-950 ">
 					<HomePage />
-				
+					
+					
+				</div>
 			</motion.div>
 		</div>
 	);
