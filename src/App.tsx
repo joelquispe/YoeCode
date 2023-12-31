@@ -14,7 +14,7 @@ function App() {
 		return () => clearTimeout(timeOutId);
 	}, []);
 	return (
-		<div className="bg-black flex h-screen w-screen justify-center items-center absolute">
+		<div className="bg-black flex h-screen w-screen justify-center items-center absolute ">
 			<motion.div
 				className="absolute"
 				transition={{ delay: 0.6, duration: 0.5 }}
@@ -29,9 +29,9 @@ function App() {
 				initial={{ opacity: 0 }}
 				animate={{ opacity: !showLogo ? 1 : 0 }}
 			>
-				<div className="h-full  w-screen bg-slate-950">
+				
 					<HomePage />
-				</div>
+				
 			</motion.div>
 		</div>
 	);
