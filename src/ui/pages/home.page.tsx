@@ -5,6 +5,8 @@ import {
 	RiWhatsappFill,
 	RiYoutubeFill,
 	RiTiktokFill,
+	RiTwitchFill,
+	RiKickFill,
 } from 'react-icons/ri';
 
 import CompContainerSocialNetwork from '../components/container-socialNetwork.comp';
@@ -17,17 +19,15 @@ const HomePage = () => {
 			</h1>
 			<p className="text-white font-medium text-center text-lg w-10/12 lg:w-8/12 mt-11 mb-10">
 				Hola, soy creador de contenido y desarrollador, me gusta compartir mis
-				conocimientos y ayudar a los demás así que por eso trato de hacer el
-				mejor contenido posible, estudie en instituto pero la mayor parte lo
-				aprendí de forma autodidacta, espero te guste el contenido y no te
-				olvides de seguirme en mis redes, exitos.
+				conocimientos y ayudar a los demás, estudie en instituto pero la mayor parte lo
+				aprendí de forma autodidacta, espero te guste el contenido y gracias por el apoyo, exitos.
 			</p>
 
-			<div className="grid grid-cols-2 sm:flex gap-8 lg:gap-10  lg:pb-0 ">
+			<div className="grid grid-cols-2  gap-8 sm:gap-14 sm:grid-cols-3 lg:flex lg:gap-10  lg:pb-0 ">
 				<CompContainerSocialNetwork link="https://www.facebook.com/YoeCode">
 					<RiFacebookBoxFill />
 				</CompContainerSocialNetwork>
-				<CompContainerSocialNetwork link="https://api.whatsapp.com/send?phone=51960765839&text=%F0%9F%98%80">
+				<CompContainerSocialNetwork link="https://wa.link/puppim">
 					<RiWhatsappFill />
 				</CompContainerSocialNetwork>
 				<CompContainerSocialNetwork link="https://www.instagram.com/j0el_quispe/">
@@ -42,10 +42,16 @@ const HomePage = () => {
 				<CompContainerSocialNetwork link="https://www.tiktok.com/@yoecode">
 					<RiTiktokFill />
 				</CompContainerSocialNetwork>
+				<CompContainerSocialNetwork link="https://www.twitch.tv/yoecode">
+					<RiTwitchFill />
+				</CompContainerSocialNetwork>
+				<CompContainerSocialNetwork link="https://kick.com/yoecode">
+					<RiKickFill />
+				</CompContainerSocialNetwork>
 			</div>
 
 			<a
-				href="https://api.whatsapp.com/send?phone=51960765839&text=%F0%9F%98%80"
+				href="https://wa.link/puppim"
 				className="scale-infinite rounded-lg  sm:absolute right-0 bottom-0  bg-slate-900 w-[260px] h-28 p-3 shadow-2xl  "
 			>
 				<div className="flex gap-1">
@@ -63,4 +69,5 @@ const HomePage = () => {
 		</div>
 	);
 };
+// https://api.whatsapp.com/send?phone=51960765839&text=Hola%20quisiera%20saber%20m%C3%A1s%20informaci%C3%B3n%20sobre%20
 export default HomePage;
