@@ -33,7 +33,7 @@ const HomePage = () => {
 				<CompContainerSocialNetwork link="https://www.instagram.com/j0el_quispe/">
 					<RiInstagramFill />
 				</CompContainerSocialNetwork>
-				<CompContainerSocialNetwork link="https://discord.gg/VpghnBF3Nh">
+				<CompContainerSocialNetwork link="https://discord.gg/bag7jNrGtx">
 					<RiDiscordFill />
 				</CompContainerSocialNetwork>
 				<CompContainerSocialNetwork link="https://www.youtube.com/channel/UCj2FWnuPMQDm4Rg9z_1mPoA">
