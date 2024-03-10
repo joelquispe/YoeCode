@@ -7,6 +7,8 @@ import {
 	RiTiktokFill,
 	RiTwitchFill,
 	RiKickFill,
+	RiGithubFill,
+	RiGitlabFill,
 } from 'react-icons/ri';
 
 import CompContainerSocialNetwork from '../components/container-socialNetwork.comp';
@@ -47,6 +49,12 @@ const HomePage = () => {
 				</CompContainerSocialNetwork>
 				<CompContainerSocialNetwork link="https://kick.com/yoecode">
 					<RiKickFill />
+				</CompContainerSocialNetwork>
+				<CompContainerSocialNetwork link="https://github.com/joelquispe">
+					<RiGithubFill />
+				</CompContainerSocialNetwork>
+				<CompContainerSocialNetwork link="https://gitlab.com/joelsosayaquispe">
+					<RiGitlabFill />
 				</CompContainerSocialNetwork>
 			</div>
 
