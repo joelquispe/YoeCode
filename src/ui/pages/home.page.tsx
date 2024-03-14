@@ -53,7 +53,7 @@ const HomePage = () => {
 				<CompContainerSocialNetwork link="https://github.com/joelquispe">
 					<RiGithubFill />
 				</CompContainerSocialNetwork>
-				<CompContainerSocialNetwork link="https://gitlab.com/joelsosayaquispe">
+				<CompContainerSocialNetwork link="https://gitlab.com/jquispe">
 					<RiGitlabFill />
 				</CompContainerSocialNetwork>
 			</div>
